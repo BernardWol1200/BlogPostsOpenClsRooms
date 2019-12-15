@@ -1,0 +1,13 @@
+<li [ngClass]= "{'list-group-item':true,
+	'list-group-item-success':postLikes>0,
+	'list-group-item-danger':postLikes<0
+}">
+	<h5 style="text-align:right">Date : {{ laDate | date: 'MM/dd/yyyy' | uppercase  }}</h5>
+	<h2>{{ postName }}</h2>
+	<h4>{{ postContent }}</h4>
+	<h4>Likes{{ postLikes }}</h4>
+
+	      <button class="btn btn-success" (click)="onClickLike()">Love it</button>
+	      <button class="btn btn-danger" (click)="onClickNotLike()">Don't love it</button>
+
+</li>
